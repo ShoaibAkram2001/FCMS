@@ -35,12 +35,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.SignUpLinkLabel = new System.Windows.Forms.LinkLabel();
             this.NotAccountLabel = new System.Windows.Forms.Label();
-            this.LoginBtn = new System.Windows.Forms.Button();
-            this.PasswordBox = new System.Windows.Forms.TextBox();
+            this.LoginButton = new System.Windows.Forms.Button();
+            this.PasswordLoginBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.UsernameLabel = new System.Windows.Forms.Label();
-            this.usernameBox = new System.Windows.Forms.TextBox();
+            this.LoginUsernameBox = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.LoginLabel = new System.Windows.Forms.Label();
@@ -54,9 +54,9 @@
             this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(651, 1);
+            this.panel2.Location = new System.Drawing.Point(643, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(395, 692);
+            this.panel2.Size = new System.Drawing.Size(403, 692);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -69,6 +69,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label2
             // 
@@ -87,21 +88,21 @@
             // 
             this.panel1.Controls.Add(this.SignUpLinkLabel);
             this.panel1.Controls.Add(this.NotAccountLabel);
-            this.panel1.Controls.Add(this.LoginBtn);
-            this.panel1.Controls.Add(this.PasswordBox);
+            this.panel1.Controls.Add(this.LoginButton);
+            this.panel1.Controls.Add(this.PasswordLoginBox);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.PasswordLabel);
             this.panel1.Controls.Add(this.UsernameLabel);
-            this.panel1.Controls.Add(this.usernameBox);
+            this.panel1.Controls.Add(this.LoginUsernameBox);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.LoginLabel);
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Location = new System.Drawing.Point(4, 1);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 4);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.panel1.Size = new System.Drawing.Size(644, 692);
+            this.panel1.Size = new System.Drawing.Size(640, 692);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -132,38 +133,41 @@
             this.NotAccountLabel.TabIndex = 10;
             this.NotAccountLabel.Text = "Don\'t have an Account ?";
             // 
-            // LoginBtn
+            // LoginButton
             // 
-            this.LoginBtn.BackColor = System.Drawing.Color.DodgerBlue;
-            this.LoginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.LoginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LoginBtn.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LoginBtn.Location = new System.Drawing.Point(188, 430);
-            this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.LoginBtn.Size = new System.Drawing.Size(298, 65);
-            this.LoginBtn.TabIndex = 9;
-            this.LoginBtn.Text = "Login";
-            this.LoginBtn.UseVisualStyleBackColor = false;
+            this.LoginButton.BackColor = System.Drawing.Color.DodgerBlue;
+            this.LoginButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LoginButton.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LoginButton.Location = new System.Drawing.Point(188, 430);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.LoginButton.Size = new System.Drawing.Size(298, 65);
+            this.LoginButton.TabIndex = 9;
+            this.LoginButton.Text = "Login";
+            this.LoginButton.UseVisualStyleBackColor = false;
+            this.LoginButton.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
-            // PasswordBox
+            // PasswordLoginBox
             // 
-            this.PasswordBox.BackColor = System.Drawing.SystemColors.Control;
-            this.PasswordBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PasswordBox.ForeColor = System.Drawing.Color.Black;
-            this.PasswordBox.Location = new System.Drawing.Point(82, 303);
-            this.PasswordBox.Multiline = true;
-            this.PasswordBox.Name = "PasswordBox";
-            this.PasswordBox.Size = new System.Drawing.Size(618, 25);
-            this.PasswordBox.TabIndex = 5;
-            this.PasswordBox.TextChanged += new System.EventHandler(this.PasswordBox_TextChanged);
+            this.PasswordLoginBox.BackColor = System.Drawing.SystemColors.Control;
+            this.PasswordLoginBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PasswordLoginBox.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.PasswordLoginBox.ForeColor = System.Drawing.Color.Black;
+            this.PasswordLoginBox.Location = new System.Drawing.Point(59, 298);
+            this.PasswordLoginBox.Multiline = true;
+            this.PasswordLoginBox.Name = "PasswordLoginBox";
+            this.PasswordLoginBox.PasswordChar = '.';
+            this.PasswordLoginBox.Size = new System.Drawing.Size(561, 36);
+            this.PasswordLoginBox.TabIndex = 5;
+            this.PasswordLoginBox.TextChanged += new System.EventHandler(this.PasswordBox_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.Control;
             this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(363, 205);
+            this.label3.Location = new System.Drawing.Point(340, 204);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 20);
             this.label3.TabIndex = 3;
@@ -174,7 +178,7 @@
             this.PasswordLabel.BackColor = System.Drawing.SystemColors.Control;
             this.PasswordLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.PasswordLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.PasswordLabel.Location = new System.Drawing.Point(82, 277);
+            this.PasswordLabel.Location = new System.Drawing.Point(59, 276);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(100, 23);
             this.PasswordLabel.TabIndex = 3;
@@ -186,38 +190,39 @@
             this.UsernameLabel.BackColor = System.Drawing.SystemColors.Control;
             this.UsernameLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.UsernameLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.UsernameLabel.Location = new System.Drawing.Point(82, 191);
+            this.UsernameLabel.Location = new System.Drawing.Point(59, 190);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(108, 23);
             this.UsernameLabel.TabIndex = 3;
             this.UsernameLabel.Text = "Username";
             // 
-            // usernameBox
+            // LoginUsernameBox
             // 
-            this.usernameBox.BackColor = System.Drawing.SystemColors.Control;
-            this.usernameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.usernameBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.usernameBox.ForeColor = System.Drawing.Color.Black;
-            this.usernameBox.Location = new System.Drawing.Point(82, 217);
-            this.usernameBox.Multiline = true;
-            this.usernameBox.Name = "usernameBox";
-            this.usernameBox.Size = new System.Drawing.Size(618, 23);
-            this.usernameBox.TabIndex = 2;
+            this.LoginUsernameBox.BackColor = System.Drawing.SystemColors.Control;
+            this.LoginUsernameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LoginUsernameBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LoginUsernameBox.ForeColor = System.Drawing.Color.Black;
+            this.LoginUsernameBox.Location = new System.Drawing.Point(59, 216);
+            this.LoginUsernameBox.Multiline = true;
+            this.LoginUsernameBox.Name = "LoginUsernameBox";
+            this.LoginUsernameBox.Size = new System.Drawing.Size(561, 22);
+            this.LoginUsernameBox.TabIndex = 2;
+            this.LoginUsernameBox.TextChanged += new System.EventHandler(this.usernameBox_TextChanged);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel4.Location = new System.Drawing.Point(82, 334);
+            this.panel4.Location = new System.Drawing.Point(59, 333);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(618, 4);
+            this.panel4.Size = new System.Drawing.Size(561, 4);
             this.panel4.TabIndex = 1;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel3.Location = new System.Drawing.Point(82, 246);
+            this.panel3.Location = new System.Drawing.Point(59, 245);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(618, 3);
+            this.panel3.Size = new System.Drawing.Size(561, 4);
             this.panel3.TabIndex = 1;
             // 
             // LoginLabel
@@ -241,7 +246,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.DodgerBlue;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1195, 741);
+            this.MaximumSize = new System.Drawing.Size(1064, 741);
             this.Name = "Login";
             this.Text = "Login";
             this.panel2.ResumeLayout(false);
@@ -259,16 +264,17 @@
         private PictureBox pictureBox1;
         private Label label2;
         private Panel panel1;
-        private Button LoginBtn;
-        private TextBox PasswordBox;
+       
+        private TextBox PasswordLoginBox;
         private Label label3;
         private Label PasswordLabel;
         private Label UsernameLabel;
-        private TextBox usernameBox;
+        private TextBox LoginUsernameBox;
         private Panel panel4;
         private Panel panel3;
         private Label LoginLabel;
         private Label NotAccountLabel;
         private LinkLabel SignUpLinkLabel;
+        private Button LoginButton;
     }
 }

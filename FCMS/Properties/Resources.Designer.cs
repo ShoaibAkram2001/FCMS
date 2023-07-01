@@ -63,6 +63,26 @@ namespace FCMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap addStudent_fotor_bg_remover_20230701114049 {
+            get {
+                object obj = ResourceManager.GetObject("addStudent-fotor-bg-remover-20230701114049", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap deleteStudent_fotor_bg_remover_20230701114644 {
+            get {
+                object obj = ResourceManager.GetObject("deleteStudent-fotor-bg-remover-20230701114644", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FCMS {
             get {
                 object obj = ResourceManager.GetObject("FCMS", resourceCulture);
@@ -73,9 +93,89 @@ namespace FCMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FCMS_fotor_bg_remover_202307019530 {
+            get {
+                object obj = ResourceManager.GetObject("FCMS-fotor-bg-remover-202307019530", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FCMS_fotor_bg_remover_2023070195301 {
+            get {
+                object obj = ResourceManager.GetObject("FCMS-fotor-bg-remover-2023070195301", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FCMS1 {
             get {
                 object obj = ResourceManager.GetObject("FCMS1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout_fotor_bg_remover_20230701111817 {
+            get {
+                object obj = ResourceManager.GetObject("logout-fotor-bg-remover-20230701111817", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout_fotor_bg_remover_202307011118171 {
+            get {
+                object obj = ResourceManager.GetObject("logout-fotor-bg-remover-202307011118171", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap markAttendance_fotor_bg_remover_2023070111420 {
+            get {
+                object obj = ResourceManager.GetObject("markAttendance-fotor-bg-remover-2023070111420", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap searchStudent_fotor_bg_remover_20230701114532 {
+            get {
+                object obj = ResourceManager.GetObject("searchStudent-fotor-bg-remover-20230701114532", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap updateStd_fotor_bg_remover_20230701114323 {
+            get {
+                object obj = ResourceManager.GetObject("updateStd-fotor-bg-remover-20230701114323", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap viewAttendance_fotor_bg_remover_20230701114814 {
+            get {
+                object obj = ResourceManager.GetObject("viewAttendance-fotor-bg-remover-20230701114814", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

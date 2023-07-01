@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BackToLogin = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
             this.ConfirmBox = new System.Windows.Forms.TextBox();
             this.MobileBox = new System.Windows.Forms.TextBox();
@@ -55,6 +56,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.BackToLogin);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.ConfirmBox);
             this.panel1.Controls.Add(this.MobileBox);
@@ -70,6 +72,7 @@
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(402, 1);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 4);
@@ -79,13 +82,28 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // BackToLogin
+            // 
+            this.BackToLogin.AutoSize = true;
+            this.BackToLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BackToLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BackToLogin.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.BackToLogin.Location = new System.Drawing.Point(37, 533);
+            this.BackToLogin.Name = "BackToLogin";
+            this.BackToLogin.Padding = new System.Windows.Forms.Padding(5);
+            this.BackToLogin.Size = new System.Drawing.Size(153, 33);
+            this.BackToLogin.TabIndex = 12;
+            this.BackToLogin.TabStop = true;
+            this.BackToLogin.Text = "Back to Login";
+            this.BackToLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SignUpLinkLabel_LinkClicked);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DodgerBlue;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(195, 579);
+            this.button1.Location = new System.Drawing.Point(167, 599);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.button1.Size = new System.Drawing.Size(265, 65);
@@ -98,11 +116,12 @@
             // 
             this.ConfirmBox.BackColor = System.Drawing.SystemColors.Control;
             this.ConfirmBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ConfirmBox.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ConfirmBox.ForeColor = System.Drawing.Color.Black;
-            this.ConfirmBox.Location = new System.Drawing.Point(73, 468);
+            this.ConfirmBox.Location = new System.Drawing.Point(73, 459);
             this.ConfirmBox.Multiline = true;
             this.ConfirmBox.Name = "ConfirmBox";
-            this.ConfirmBox.Size = new System.Drawing.Size(549, 25);
+            this.ConfirmBox.Size = new System.Drawing.Size(549, 34);
             this.ConfirmBox.TabIndex = 7;
             this.ConfirmBox.TextChanged += new System.EventHandler(this.ConfirmBox_TextChanged);
             // 
@@ -122,11 +141,13 @@
             // 
             this.PasswordBox.BackColor = System.Drawing.SystemColors.Control;
             this.PasswordBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PasswordBox.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.PasswordBox.ForeColor = System.Drawing.Color.Black;
-            this.PasswordBox.Location = new System.Drawing.Point(73, 303);
+            this.PasswordBox.Location = new System.Drawing.Point(73, 292);
             this.PasswordBox.Multiline = true;
             this.PasswordBox.Name = "PasswordBox";
-            this.PasswordBox.Size = new System.Drawing.Size(549, 25);
+            this.PasswordBox.PasswordChar = '.';
+            this.PasswordBox.Size = new System.Drawing.Size(549, 36);
             this.PasswordBox.TabIndex = 5;
             this.PasswordBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -147,7 +168,7 @@
             this.label4.BackColor = System.Drawing.SystemColors.Control;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label4.Location = new System.Drawing.Point(73, 442);
+            this.label4.Location = new System.Drawing.Point(73, 433);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(183, 23);
             this.label4.TabIndex = 3;
@@ -173,7 +194,7 @@
             this.PasswordLabel.BackColor = System.Drawing.SystemColors.Control;
             this.PasswordLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.PasswordLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.PasswordLabel.Location = new System.Drawing.Point(73, 277);
+            this.PasswordLabel.Location = new System.Drawing.Point(73, 266);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(100, 23);
             this.PasswordLabel.TabIndex = 3;
@@ -335,5 +356,6 @@
         private Label label4;
         private Button button1;
         private PictureBox pictureBox1;
+        private LinkLabel BackToLogin;
     }
 }
