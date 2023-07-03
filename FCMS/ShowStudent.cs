@@ -41,18 +41,49 @@ namespace FCMS
                 return;
             }
 
+            string checkQuery = "SELECT COUNT(*) FROM student WHERE rollno = @RollNo";
             string query = "SELECT * FROM student WHERE rollno = @RollNo";
 
             try
             {
                 using System.Data.SqlClient.SqlConnection connection = new System.Data.SqlClient.SqlConnection(connectionString);
                 {
-                    SqlCommand command = new SqlCommand(query, connection);
+
+
+
+                    SqlCommand command = new SqlCommand(checkQuery, connection);
                     command.Parameters.AddWithValue("@RollNo", rollNo);
 
                     connection.Open();
-                    SqlDataReader reader = command.ExecuteReader();
+                    //   SqlDataReader reader = command.ExecuteReader();
 
+                    int count = (int)command.ExecuteScalar();
+
+                    if (count > 0)
+                    {
+                        
+                        SqlCommand searchCommand = new SqlCommand(query, connection);
+
+                        searchCommand.Parameters.AddWithValue("@RollNo", rollNo);
+
+                        SqlDataAdapter adapter = new SqlDataAdapter(searchCommand);
+                        DataTable studentTable = new DataTable();
+                        adapter.Fill(studentTable);
+
+                        SearchStudentGridView.DataSource = studentTable;
+
+                        rollshow.Text = string.Empty;
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("No matching student record found for the provided roll number.",
+                            "Error", MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+
+                        //Console.WriteLine("No matching student record found for the provided roll number.");
+                    }
+                    /*
                     if (reader.Read())
                     {
                         string name = reader["Name"].ToString();
@@ -74,7 +105,7 @@ namespace FCMS
                         Console.WriteLine("Name: " + name);
                         Console.WriteLine("Roll No: " + rollNo);
                         Console.WriteLine("Class: " + studentClass);
-                        Console.WriteLine("Age: " + age);*/
+                        Console.WriteLine("Age: " + age);
                     }
                     else
                     {
@@ -86,13 +117,18 @@ namespace FCMS
                     }
 
                     reader.Close();
-                    connection.Close();
+                    connection.Close();*/
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine("An error occurred while searching for the student record: " + ex.Message);
             }
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

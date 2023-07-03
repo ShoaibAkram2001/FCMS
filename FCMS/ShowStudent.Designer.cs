@@ -40,9 +40,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.backBtn = new System.Windows.Forms.Button();
             this.searchStd = new System.Windows.Forms.Button();
+            this.SearchStudentGridView = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SearchStudentGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // UsernameLabel
@@ -51,7 +53,7 @@
             this.UsernameLabel.BackColor = System.Drawing.SystemColors.Control;
             this.UsernameLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.UsernameLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.UsernameLabel.Location = new System.Drawing.Point(71, 249);
+            this.UsernameLabel.Location = new System.Drawing.Point(61, 180);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(79, 23);
             this.UsernameLabel.TabIndex = 3;
@@ -62,7 +64,7 @@
             this.rollshow.BackColor = System.Drawing.SystemColors.Control;
             this.rollshow.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rollshow.ForeColor = System.Drawing.Color.Black;
-            this.rollshow.Location = new System.Drawing.Point(71, 275);
+            this.rollshow.Location = new System.Drawing.Point(61, 206);
             this.rollshow.Multiline = true;
             this.rollshow.Name = "rollshow";
             this.rollshow.Size = new System.Drawing.Size(549, 23);
@@ -71,7 +73,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel3.Location = new System.Drawing.Point(71, 304);
+            this.panel3.Location = new System.Drawing.Point(61, 235);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(549, 3);
             this.panel3.TabIndex = 1;
@@ -91,7 +93,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(213, 81);
+            this.label1.Location = new System.Drawing.Point(213, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(188, 32);
             this.label1.TabIndex = 0;
@@ -125,13 +127,14 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.Control;
             this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(331, 273);
+            this.label3.Location = new System.Drawing.Point(321, 204);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 23);
             this.label3.TabIndex = 3;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.SearchStudentGridView);
             this.panel1.Controls.Add(this.backBtn);
             this.panel1.Controls.Add(this.searchStd);
             this.panel1.Controls.Add(this.label3);
@@ -148,6 +151,7 @@
             this.panel1.Padding = new System.Windows.Forms.Padding(5);
             this.panel1.Size = new System.Drawing.Size(644, 692);
             this.panel1.TabIndex = 6;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // backBtn
             // 
@@ -155,10 +159,10 @@
             this.backBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.backBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backBtn.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.backBtn.Location = new System.Drawing.Point(61, 333);
+            this.backBtn.Location = new System.Drawing.Point(61, 272);
             this.backBtn.Name = "backBtn";
             this.backBtn.Padding = new System.Windows.Forms.Padding(0, 11, 0, 11);
-            this.backBtn.Size = new System.Drawing.Size(89, 68);
+            this.backBtn.Size = new System.Drawing.Size(68, 49);
             this.backBtn.TabIndex = 11;
             this.backBtn.Text = "Back";
             this.backBtn.UseVisualStyleBackColor = false;
@@ -170,14 +174,26 @@
             this.searchStd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.searchStd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchStd.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.searchStd.Location = new System.Drawing.Point(188, 453);
+            this.searchStd.Location = new System.Drawing.Point(204, 325);
             this.searchStd.Name = "searchStd";
             this.searchStd.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.searchStd.Size = new System.Drawing.Size(265, 65);
+            this.searchStd.Size = new System.Drawing.Size(197, 55);
             this.searchStd.TabIndex = 9;
             this.searchStd.Text = "Search Student";
             this.searchStd.UseVisualStyleBackColor = false;
             this.searchStd.Click += new System.EventHandler(this.searchStdBtn_Click);
+            // 
+            // SearchStudentGridView
+            // 
+            this.SearchStudentGridView.BackgroundColor = System.Drawing.Color.White;
+            this.SearchStudentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SearchStudentGridView.GridColor = System.Drawing.SystemColors.Control;
+            this.SearchStudentGridView.Location = new System.Drawing.Point(95, 453);
+            this.SearchStudentGridView.Name = "SearchStudentGridView";
+            this.SearchStudentGridView.RowHeadersWidth = 51;
+            this.SearchStudentGridView.RowTemplate.Height = 29;
+            this.SearchStudentGridView.Size = new System.Drawing.Size(452, 216);
+            this.SearchStudentGridView.TabIndex = 12;
             // 
             // ShowStudent
             // 
@@ -196,6 +212,7 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SearchStudentGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -213,5 +230,6 @@
         private Panel panel1;
         private Button searchStd;
         private Button backBtn;
+        private DataGridView SearchStudentGridView;
     }
 }
