@@ -49,22 +49,28 @@ namespace FCMS
 
         private void label3_Click(object sender, EventArgs e)
         {
-
+            MarkAttendance addStd = new MarkAttendance();
+            addStd.Show();
+            this.Hide();
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
-
+           UpdateStudent addStd = new UpdateStudent();
+            addStd.Show();
+            this.Hide();
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-
+            addStudent addStd = new addStudent();
+            addStd.Show();
+            this.Hide();
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
 
         private void addStd_Paint(object sender, PaintEventArgs e)
@@ -84,7 +90,9 @@ namespace FCMS
 
         private void Show_Click(object sender, EventArgs e)
         {
-
+            ShowStudent addStd = new ShowStudent();
+            addStd.Show();
+            this.Hide();
         }
 
         private void DeleteStd_Paint(object sender, PaintEventArgs e)
@@ -104,12 +112,77 @@ namespace FCMS
 
         private void label2_Click(object sender, EventArgs e)
         {
-
+            Login addStd = new Login();
+            addStd.Show();
+            this.Hide();
         }
 
         private void panel6_Paint_1(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            MarkAttendance addStd = new MarkAttendance();
+            addStd.Show();
+            this.Hide();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            addStudent addStd = new addStudent();
+            addStd.Show();
+            this.Hide();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+           UpdateStudent addStd = new UpdateStudent();
+            addStd.Show();
+            this.Hide();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            ShowStudent addStd = new ShowStudent();
+            addStd.Show();
+            this.Hide();
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+           deleteStudent addStd = new deleteStudent();
+            addStd.Show();
+            this.Hide();
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            deleteStudent addStd = new deleteStudent();
+            addStd.Show();
+            this.Hide();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+          ViewAttendance addStd = new ViewAttendance();
+            addStd.Show();
+            this.Hide();
+        }
+
+        private void view_Click(object sender, EventArgs e)
+        {
+            ViewAttendance addStd = new ViewAttendance();
+            addStd.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Login addStd = new Login();
+            addStd.Show();
+            this.Hide();
         }
     }
 }

@@ -121,6 +121,7 @@
             this.ConfirmBox.Location = new System.Drawing.Point(73, 459);
             this.ConfirmBox.Multiline = true;
             this.ConfirmBox.Name = "ConfirmBox";
+            this.ConfirmBox.PasswordChar = '.';
             this.ConfirmBox.Size = new System.Drawing.Size(549, 34);
             this.ConfirmBox.TabIndex = 7;
             this.ConfirmBox.TextChanged += new System.EventHandler(this.ConfirmBox_TextChanged);

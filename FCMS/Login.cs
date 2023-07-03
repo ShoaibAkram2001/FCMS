@@ -66,7 +66,8 @@ namespace FCMS
 
                         if (count > 0)
                         {
-                            MessageBox.Show("Login successful!");
+                            MessageBox.Show("Login Successfull!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                             // Perform any additional actions or navigate to another form
                             connection.Close();
 

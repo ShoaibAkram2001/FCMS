@@ -41,29 +41,29 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Attendance = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.addStd = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.updat = new System.Windows.Forms.Label();
             this.updateStd = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.showStd = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.show = new System.Windows.Forms.Label();
             this.logout = new System.Windows.Forms.Panel();
             this.view = new System.Windows.Forms.Label();
-            this.deleteStd = new System.Windows.Forms.Panel();
-            this.delete = new System.Windows.Forms.Label();
-            this.adminHead = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.deleteStd = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.delete = new System.Windows.Forms.Label();
+            this.adminHead = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,21 +72,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             this.Attendance.SuspendLayout();
-            this.addStd.SuspendLayout();
-            this.updateStd.SuspendLayout();
-            this.showStd.SuspendLayout();
-            this.logout.SuspendLayout();
-            this.deleteStd.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.addStd.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.updateStd.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.showStd.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.logout.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.deleteStd.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
@@ -162,14 +162,15 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Location = new System.Drawing.Point(804, 40);
-            this.panel4.Margin = new System.Windows.Forms.Padding(250, 40, 3, 3);
+            this.panel4.Location = new System.Drawing.Point(834, 40);
+            this.panel4.Margin = new System.Windows.Forms.Padding(280, 40, 3, 3);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(44, 45);
             this.panel4.TabIndex = 7;
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::FCMS.Properties.Resources.logout_fotor_bg_remover_202307011118171;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
@@ -177,11 +178,12 @@
             this.pictureBox2.Size = new System.Drawing.Size(44, 45);
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(851, 40);
+            this.panel3.Location = new System.Drawing.Point(881, 40);
             this.panel3.Margin = new System.Windows.Forms.Padding(0, 40, 3, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(92, 42);
@@ -191,6 +193,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(1, 10);
@@ -225,6 +228,24 @@
             this.label3.Text = "Mark Attendance";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.pictureBox3);
+            this.panel5.Location = new System.Drawing.Point(56, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(87, 74);
+            this.panel5.TabIndex = 6;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::FCMS.Properties.Resources.markAttendance_fotor_bg_remover_2023070111420;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(87, 74);
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // addStd
             // 
             this.addStd.BackColor = System.Drawing.Color.Crimson;
@@ -236,6 +257,24 @@
             this.addStd.Size = new System.Drawing.Size(219, 123);
             this.addStd.TabIndex = 3;
             this.addStd.Paint += new System.Windows.Forms.PaintEventHandler(this.addStd_Paint);
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.pictureBox5);
+            this.panel7.Location = new System.Drawing.Point(70, 10);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(75, 67);
+            this.panel7.TabIndex = 7;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::FCMS.Properties.Resources.addStudent_fotor_bg_remover_20230701114049;
+            this.pictureBox5.Location = new System.Drawing.Point(0, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(75, 67);
+            this.pictureBox5.TabIndex = 8;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // label4
             // 
@@ -273,138 +312,6 @@
             this.updateStd.TabIndex = 4;
             this.updateStd.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
-            // showStd
-            // 
-            this.showStd.BackColor = System.Drawing.SystemColors.GrayText;
-            this.showStd.Controls.Add(this.panel9);
-            this.showStd.Controls.Add(this.show);
-            this.showStd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.showStd.Location = new System.Drawing.Point(60, 475);
-            this.showStd.Name = "showStd";
-            this.showStd.Size = new System.Drawing.Size(219, 123);
-            this.showStd.TabIndex = 3;
-            this.showStd.Paint += new System.Windows.Forms.PaintEventHandler(this.showStd_Paint);
-            // 
-            // show
-            // 
-            this.show.AutoSize = true;
-            this.show.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.show.ForeColor = System.Drawing.Color.White;
-            this.show.Location = new System.Drawing.Point(35, 88);
-            this.show.Name = "show";
-            this.show.Size = new System.Drawing.Size(139, 23);
-            this.show.TabIndex = 2;
-            this.show.Text = "Show Student";
-            this.show.Click += new System.EventHandler(this.Show_Click);
-            // 
-            // logout
-            // 
-            this.logout.BackColor = System.Drawing.Color.DodgerBlue;
-            this.logout.Controls.Add(this.view);
-            this.logout.Controls.Add(this.panel6);
-            this.logout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logout.Location = new System.Drawing.Point(720, 475);
-            this.logout.Name = "logout";
-            this.logout.Size = new System.Drawing.Size(224, 123);
-            this.logout.TabIndex = 4;
-            this.logout.Paint += new System.Windows.Forms.PaintEventHandler(this.Logout_Paint);
-            // 
-            // view
-            // 
-            this.view.AutoSize = true;
-            this.view.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.view.ForeColor = System.Drawing.Color.White;
-            this.view.Location = new System.Drawing.Point(24, 88);
-            this.view.Name = "view";
-            this.view.Size = new System.Drawing.Size(180, 23);
-            this.view.TabIndex = 2;
-            this.view.Text = "View Attendance";
-            // 
-            // deleteStd
-            // 
-            this.deleteStd.BackColor = System.Drawing.Color.Chocolate;
-            this.deleteStd.Controls.Add(this.panel10);
-            this.deleteStd.Controls.Add(this.delete);
-            this.deleteStd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.deleteStd.Location = new System.Drawing.Point(380, 475);
-            this.deleteStd.Name = "deleteStd";
-            this.deleteStd.Size = new System.Drawing.Size(219, 123);
-            this.deleteStd.TabIndex = 4;
-            this.deleteStd.Paint += new System.Windows.Forms.PaintEventHandler(this.DeleteStd_Paint);
-            // 
-            // delete
-            // 
-            this.delete.AutoSize = true;
-            this.delete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.delete.ForeColor = System.Drawing.Color.White;
-            this.delete.Location = new System.Drawing.Point(35, 89);
-            this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(152, 23);
-            this.delete.TabIndex = 2;
-            this.delete.Text = "Delete Student";
-            // 
-            // adminHead
-            // 
-            this.adminHead.AutoSize = true;
-            this.adminHead.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.adminHead.Location = new System.Drawing.Point(27, 161);
-            this.adminHead.Name = "adminHead";
-            this.adminHead.Size = new System.Drawing.Size(252, 32);
-            this.adminHead.TabIndex = 5;
-            this.adminHead.Text = "Admin Dashboard";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::FCMS.Properties.Resources.markAttendance_fotor_bg_remover_2023070111420;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(87, 74);
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.pictureBox3);
-            this.panel5.Location = new System.Drawing.Point(56, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(87, 74);
-            this.panel5.TabIndex = 6;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.pictureBox4);
-            this.panel6.Location = new System.Drawing.Point(45, 4);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(87, 87);
-            this.panel6.TabIndex = 6;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint_1);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::FCMS.Properties.Resources.viewAttendance_fotor_bg_remover_20230701114814;
-            this.pictureBox4.Location = new System.Drawing.Point(12, -4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(87, 87);
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.pictureBox5);
-            this.panel7.Location = new System.Drawing.Point(70, 10);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(75, 67);
-            this.panel7.TabIndex = 7;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::FCMS.Properties.Resources.addStudent_fotor_bg_remover_20230701114049;
-            this.pictureBox5.Location = new System.Drawing.Point(0, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(75, 67);
-            this.pictureBox5.TabIndex = 8;
-            this.pictureBox5.TabStop = false;
-            // 
             // panel8
             // 
             this.panel8.Controls.Add(this.pictureBox6);
@@ -421,6 +328,19 @@
             this.pictureBox6.Size = new System.Drawing.Size(83, 87);
             this.pictureBox6.TabIndex = 8;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
+            // showStd
+            // 
+            this.showStd.BackColor = System.Drawing.SystemColors.GrayText;
+            this.showStd.Controls.Add(this.panel9);
+            this.showStd.Controls.Add(this.show);
+            this.showStd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.showStd.Location = new System.Drawing.Point(60, 475);
+            this.showStd.Name = "showStd";
+            this.showStd.Size = new System.Drawing.Size(219, 123);
+            this.showStd.TabIndex = 3;
+            this.showStd.Paint += new System.Windows.Forms.PaintEventHandler(this.showStd_Paint);
             // 
             // panel9
             // 
@@ -438,6 +358,74 @@
             this.pictureBox7.Size = new System.Drawing.Size(87, 83);
             this.pictureBox7.TabIndex = 8;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            // 
+            // show
+            // 
+            this.show.AutoSize = true;
+            this.show.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.show.ForeColor = System.Drawing.Color.White;
+            this.show.Location = new System.Drawing.Point(35, 88);
+            this.show.Name = "show";
+            this.show.Size = new System.Drawing.Size(139, 23);
+            this.show.TabIndex = 2;
+            this.show.Text = "Show Student";
+            this.show.Click += new System.EventHandler(this.Show_Click);
+            // 
+            // logout
+            // 
+            this.logout.BackColor = System.Drawing.Color.BlueViolet;
+            this.logout.Controls.Add(this.view);
+            this.logout.Controls.Add(this.panel6);
+            this.logout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logout.Location = new System.Drawing.Point(720, 475);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(224, 123);
+            this.logout.TabIndex = 4;
+            this.logout.Paint += new System.Windows.Forms.PaintEventHandler(this.Logout_Paint);
+            // 
+            // view
+            // 
+            this.view.AutoSize = true;
+            this.view.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.view.ForeColor = System.Drawing.Color.White;
+            this.view.Location = new System.Drawing.Point(24, 93);
+            this.view.Name = "view";
+            this.view.Size = new System.Drawing.Size(180, 23);
+            this.view.TabIndex = 2;
+            this.view.Text = "View Attendance";
+            this.view.Click += new System.EventHandler(this.view_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.pictureBox4);
+            this.panel6.Location = new System.Drawing.Point(70, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(87, 87);
+            this.panel6.TabIndex = 6;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint_1);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(87, 87);
+            this.pictureBox4.TabIndex = 7;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // deleteStd
+            // 
+            this.deleteStd.BackColor = System.Drawing.Color.DarkCyan;
+            this.deleteStd.Controls.Add(this.panel10);
+            this.deleteStd.Controls.Add(this.delete);
+            this.deleteStd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deleteStd.Location = new System.Drawing.Point(380, 475);
+            this.deleteStd.Name = "deleteStd";
+            this.deleteStd.Size = new System.Drawing.Size(219, 123);
+            this.deleteStd.TabIndex = 4;
+            this.deleteStd.Paint += new System.Windows.Forms.PaintEventHandler(this.DeleteStd_Paint);
             // 
             // panel10
             // 
@@ -449,12 +437,35 @@
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Image = global::FCMS.Properties.Resources.deleteStudent_fotor_bg_remover_20230701114644;
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
             this.pictureBox8.Location = new System.Drawing.Point(0, 0);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(83, 83);
             this.pictureBox8.TabIndex = 8;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
+            // 
+            // delete
+            // 
+            this.delete.AutoSize = true;
+            this.delete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.delete.ForeColor = System.Drawing.Color.White;
+            this.delete.Location = new System.Drawing.Point(35, 89);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(152, 23);
+            this.delete.TabIndex = 2;
+            this.delete.Text = "Delete Student";
+            this.delete.Click += new System.EventHandler(this.delete_Click);
+            // 
+            // adminHead
+            // 
+            this.adminHead.AutoSize = true;
+            this.adminHead.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.adminHead.Location = new System.Drawing.Point(27, 161);
+            this.adminHead.Name = "adminHead";
+            this.adminHead.Size = new System.Drawing.Size(252, 32);
+            this.adminHead.TabIndex = 5;
+            this.adminHead.Text = "Admin Dashboard";
             // 
             // Dashboard
             // 
@@ -490,26 +501,26 @@
             this.panel3.PerformLayout();
             this.Attendance.ResumeLayout(false);
             this.Attendance.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.addStd.ResumeLayout(false);
             this.addStd.PerformLayout();
-            this.updateStd.ResumeLayout(false);
-            this.updateStd.PerformLayout();
-            this.showStd.ResumeLayout(false);
-            this.showStd.PerformLayout();
-            this.logout.ResumeLayout(false);
-            this.logout.PerformLayout();
-            this.deleteStd.ResumeLayout(false);
-            this.deleteStd.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.updateStd.ResumeLayout(false);
+            this.updateStd.PerformLayout();
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.showStd.ResumeLayout(false);
+            this.showStd.PerformLayout();
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.logout.ResumeLayout(false);
+            this.logout.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.deleteStd.ResumeLayout(false);
+            this.deleteStd.PerformLayout();
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
