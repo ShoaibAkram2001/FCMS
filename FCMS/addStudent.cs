@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -128,6 +129,15 @@ namespace FCMS
             int Age = int.Parse(AgeBox.Text.ToString());
 
 
+
+            if(isRollNoAlreadyTaken(RollNo))
+            {
+                MessageBox.Show("Roll No is already taken. Please choose a different Roll No.","Error",, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
+
+      
             string query = "INSERT INTO student (name, rollno, class, age) VALUES (@Name, @Rollno, @Class, @Age)";
 
             using System.Data.SqlClient.SqlConnection connection = new System.Data.SqlClient.SqlConnection(connectionString);
@@ -162,6 +172,37 @@ namespace FCMS
 
 
         }
+
+
+        private bool isRollNoAlreadyTaken(String rollNo)
+        {
+            bool isTaken = false;
+            try
+            {
+
+                using System.Data.SqlClient.SqlConnection connection = new System.Data.SqlClient.SqlConnection(connectionString);
+              {
+                // Check if roll number already exists
+                string checkQuery = "SELECT COUNT(*) FROM student WHERE rollno = @RollNo";
+                SqlCommand checkCommand = new SqlCommand(checkQuery, connection);
+                checkCommand.Parameters.AddWithValue("@RollNo", rollNo);
+
+                connection.Open();
+                int count = (int)checkCommand.ExecuteScalar();
+
+                isTaken = (count > 0);
+
+               
+
+            }
+        }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+            return isTaken;
+            }
 
         private void addStudent_Load(object sender, EventArgs e)
         {

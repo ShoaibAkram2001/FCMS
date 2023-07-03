@@ -1,4 +1,5 @@
 
+using MySql.Data.MySqlClient;
 using System;
 using System.Data.SqlClient;
 
@@ -103,6 +104,13 @@ namespace FCMS
             {
                 MessageBox.Show("Passwords do not match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
+            else if (IsUsernameTaken(usernameBox.Text.ToString()))
+            {
+                MessageBox.Show("Username is already taken. Please choose a different username.");
+                return;
+            }
             else
             {
                 try
@@ -152,7 +160,31 @@ namespace FCMS
            
 
         }
+        private bool IsUsernameTaken(string username)
+        {
+            bool isTaken = false;
 
+            try
+            {
+                using System.Data.SqlClient.SqlConnection connection = new System.Data.SqlClient.SqlConnection(connectionString);
+                {
+                    connection.Open();
+                    string query = "SELECT COUNT(*) FROM Login WHERE username = @Username";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    
+                        command.Parameters.AddWithValue("@Username", username);
+                        int count = Convert.ToInt32(command.ExecuteScalar());
+                        isTaken = (count > 0);
+                    
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+            return isTaken;
+        }
         private void label4_Click(object sender, EventArgs e)
         {
 
