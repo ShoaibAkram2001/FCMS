@@ -51,6 +51,7 @@
             this.label1.Size = new System.Drawing.Size(241, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "View Attendance";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // searchStd
             // 
@@ -129,6 +130,7 @@
             this.ViewdateTimePicker1.Name = "ViewdateTimePicker1";
             this.ViewdateTimePicker1.Size = new System.Drawing.Size(549, 32);
             this.ViewdateTimePicker1.TabIndex = 15;
+            this.ViewdateTimePicker1.ValueChanged += new System.EventHandler(this.ViewdateTimePicker1_ValueChanged);
             // 
             // DateLabel
             // 
@@ -141,6 +143,7 @@
             this.DateLabel.Size = new System.Drawing.Size(56, 23);
             this.DateLabel.TabIndex = 14;
             this.DateLabel.Text = "Date";
+            this.DateLabel.Click += new System.EventHandler(this.DateLabel_Click);
             // 
             // panel5
             // 
@@ -149,6 +152,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(549, 4);
             this.panel5.TabIndex = 13;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // ViewAttendance
             // 

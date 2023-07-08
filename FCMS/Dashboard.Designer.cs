@@ -64,6 +64,9 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.delete = new System.Windows.Forms.Label();
             this.adminHead = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,6 +92,8 @@
             this.deleteStd.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -467,12 +472,46 @@
             this.adminHead.TabIndex = 5;
             this.adminHead.Text = "Admin Dashboard";
             // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.Orange;
+            this.panel11.Controls.Add(this.pictureBox9);
+            this.panel11.Controls.Add(this.label1);
+            this.panel11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel11.Location = new System.Drawing.Point(380, 663);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(219, 123);
+            this.panel11.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(25, 94);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(176, 23);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "View All Students";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::FCMS.Properties.Resources.markAttendance_fotor_bg_remover_2023070111420;
+            this.pictureBox9.Location = new System.Drawing.Point(58, 12);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(87, 74);
+            this.pictureBox9.TabIndex = 7;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1046, 694);
+            this.ClientSize = new System.Drawing.Size(1046, 789);
+            this.Controls.Add(this.panel11);
             this.Controls.Add(this.adminHead);
             this.Controls.Add(this.logout);
             this.Controls.Add(this.deleteStd);
@@ -485,7 +524,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(200, 5);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.MaximumSize = new System.Drawing.Size(1064, 741);
+            this.MaximumSize = new System.Drawing.Size(1064, 850);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
@@ -523,6 +562,9 @@
             this.deleteStd.PerformLayout();
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -565,5 +607,8 @@
         private PictureBox pictureBox7;
         private Panel panel10;
         private PictureBox pictureBox8;
+        private Panel panel11;
+        private PictureBox pictureBox9;
+        private Label label1;
     }
 }

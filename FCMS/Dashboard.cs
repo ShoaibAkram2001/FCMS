@@ -184,5 +184,22 @@ namespace FCMS
             addStd.Show();
             this.Hide();
         }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            View_Students addStd = new View_Students();
+            addStd.Show();
+            this.Hide();
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+            View_Students addStd = new View_Students();
+            addStd.Show();
+            this.Hide();
+
+        }
     }
 }

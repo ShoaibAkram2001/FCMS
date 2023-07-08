@@ -64,5 +64,25 @@ namespace FCMS
             dash.Show();
             this.Hide();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ViewdateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DateLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

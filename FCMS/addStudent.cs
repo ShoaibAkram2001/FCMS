@@ -132,7 +132,7 @@ namespace FCMS
 
             if(isRollNoAlreadyTaken(RollNo))
             {
-                MessageBox.Show("Roll No is already taken. Please choose a different Roll No.","Error",, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Roll No is already taken. Please choose a different Roll No.","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
 
             }

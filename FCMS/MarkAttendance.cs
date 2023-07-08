@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -56,6 +57,36 @@ namespace FCMS
 
         }
 
+
+        private bool isRollNoAlreadyTaken(String rollNo)
+        {
+            bool isTaken = false;
+            try
+            {
+
+                using System.Data.SqlClient.SqlConnection connection = new System.Data.SqlClient.SqlConnection(connectionString);
+                {
+                    // Check if roll number already exists
+                    string checkQuery = "SELECT COUNT(*) FROM student WHERE rollno = @RollNo";
+                    SqlCommand checkCommand = new SqlCommand(checkQuery, connection);
+                    checkCommand.Parameters.AddWithValue("@RollNo", rollNo);
+
+                    connection.Open();
+                    int count = (int)checkCommand.ExecuteScalar();
+
+                    isTaken = (count > 0);
+
+
+
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+            return isTaken;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -65,12 +96,21 @@ namespace FCMS
                 String rollNo = RollAttendanceBox.Text.ToString();
                 String attendanceStatus = comboBox1.Text.ToString();
 
-
+                
                 if (string.IsNullOrEmpty(rollNo) || string.IsNullOrEmpty(attendanceStatus) || string.IsNullOrEmpty(selectedDate.ToString()))
                 {
                     MessageBox.Show("Please enter All fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+
+                
+                if (!isRollNoAlreadyTaken(rollNo))
+                {
+                    MessageBox.Show("Roll No not exist . Please choose a different Roll No.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+
+                }
+
 
 
                 string query = "INSERT INTO Attendance (rollno, date, AttendanceStatus) VALUES (@StudentID, @Date, @AttendanceStatus)";
